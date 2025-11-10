@@ -11,7 +11,6 @@ const api = {
       const productos = await respuesta.json();
       return productos;
     } catch (error) {
-      console.log(`Error al pedir productos: ${error.message}`);
       throw error;
     }
   },
