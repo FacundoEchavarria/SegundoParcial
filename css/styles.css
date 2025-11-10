@@ -1,0 +1,36 @@
+/* Importa una fuente elegante y moderna (opcional, pero recomendado) */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap'); */
+
+body {
+    /* Si usas la fuente: font-family: 'Montserrat', sans-serif; */
+    background-color: #f8f9fa; /* Fondo ligeramente gris */
+}
+
+/* Clases de utilidad para el estilo premium/minimalista */
+.navbar {
+    border-bottom: 1px solid #eee; /* Línea sutil en el navbar */
+}
+
+.nav-link {
+    font-weight: 600;
+}
+
+/* Asegura que los botones sean consistentes */
+.btn-dark {
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #333;
+}
+
+/* Sobrescribe la clase de Bootstrap para el redondeado en las tarjetas (opcional) */
+.rounded-4 {
+    border-radius: 1rem !important;
+}
+
+/* Estilo para el pie de página */
+footer {
+    border-top: 5px solid #000; /* Borde superior más grueso para un toque premium */
+}
