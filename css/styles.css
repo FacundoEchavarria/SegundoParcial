@@ -1,14 +1,9 @@
-/* Importa una fuente elegante y moderna (opcional, pero recomendado) */
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap'); */
-
 body {
-    /* Si usas la fuente: font-family: 'Montserrat', sans-serif; */
-    background-color: #f8f9fa; /* Fondo ligeramente gris */
+    background-color: #f8f9fa;
 }
 
-/* Clases de utilidad para el estilo premium/minimalista */
 .navbar {
-    border-bottom: 1px solid #eee; /* Línea sutil en el navbar */
+    border-bottom: 1px solid #eee;
 }
 
 .nav-link {
@@ -31,36 +26,37 @@ body {
 }
 
 #heroCarousel .carousel-control-prev {
-    /* "Unos px mas hacia dentro" desde la izquierda */
     left: -10px;
 }
 
 #heroCarousel .carousel-control-next {
-    /* "Unos px mas hacia dentro" desde la derecha */
     right: -10px; 
 }
 #heroCarousel .carousel-control-next-icon {
-    /* "Unos px mas hacia dentro" desde la derecha */
     height: 30px;
 }
 #heroCarousel .carousel-control-prev-icon {
-    /* "Unos px mas hacia dentro" desde la derecha */
     height: 30px;
 }
 
-/* 2. Estilo para Escritorio (lg = 992px y más): FUERA del carrusel */
 @media (min-width: 992px) {
     #heroCarousel .carousel-control-prev {
-        /* Mover fuera del borde izquierdo */
         left: -30px;
     }
 
     #heroCarousel .carousel-control-next {
-        /* Mover fuera del borde derecho */
         right: -30px;
     }
 }
-/* Asegura que los botones sean consistentes */
+
+.card-hover-lift {
+    transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+
+.card-hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important; 
+}
 .btn-dark {
     border: none;
     transition: background-color 0.3s ease;
@@ -70,12 +66,86 @@ body {
     background-color: #333;
 }
 
-/* Sobrescribe la clase de Bootstrap para el redondeado en las tarjetas (opcional) */
 .rounded-4 {
     border-radius: 1rem !important;
 }
 
-/* Estilo para el pie de página */
 footer {
-    border-top: 5px solid #000; /* Borde superior más grueso para un toque premium */
+    border-top: 5px solid #000;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    border-bottom: 1px solid #eee;
+}
+
+.nav-link {
+    font-weight: 600;
+}
+
+.navbar-brand{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo-store{
+    background: #02B3BB;
+    background: radial-gradient(circle,rgba(2, 179, 187, 1) 0%, rgba(0, 80, 126, 1) 50%);
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+#heroCarousel .carousel-control-prev {
+    left: -10px;
+}
+
+#heroCarousel .carousel-control-next {
+    right: -10px; 
+}
+#heroCarousel .carousel-control-next-icon {
+    height: 30px;
+}
+#heroCarousel .carousel-control-prev-icon {
+    height: 30px;
+}
+
+@media (min-width: 992px) {
+    #heroCarousel .carousel-control-prev {
+        left: -30px;
+    }
+
+    #heroCarousel .carousel-control-next {
+        right: -30px;
+    }
+}
+
+.card-hover-lift {
+    transition: transform 0.25s ease-out, box-shadow 0.25s ease-out;
+}
+
+.card-hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important; 
+}
+.btn-dark {
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-dark:hover {
+    background-color: #333;
+}
+
+.rounded-4 {
+    border-radius: 1rem !important;
+}
+
+footer {
+    border-top: 5px solid #000;
 }

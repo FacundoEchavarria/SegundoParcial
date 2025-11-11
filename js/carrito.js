@@ -57,9 +57,7 @@ const carrito = {
 
 	llenarModalCarrito: () => {
 		const productos = carrito.obtener();
-
 		const modalBody = document.getElementById("cuerpo-modal-carrito");
-
 		modalBody.innerHTML = "";
 
 		if (productos.length === 0) {
@@ -69,7 +67,6 @@ const carrito = {
 		}
 
 		let total = 0;
-
 		const lista = document.createElement("ul");
 		lista.classList.add("list-group");
 
@@ -105,10 +102,20 @@ const carrito = {
 			"mt-4"
 		);
 
+		const buttonGroup = document.createElement("div");
+		buttonGroup.classList.add("d-flex", "gap-2");
+
 		const vaciarBtn = document.createElement("button");
 		vaciarBtn.classList.add("btn", "btn-outline-danger");
 		vaciarBtn.id = "boton-vaciar-carrito";
 		vaciarBtn.textContent = "Vaciar Carrito";
+
+		const finalizarBtn = document.createElement("button");
+		finalizarBtn.classList.add("btn", "btn-success");
+		finalizarBtn.textContent = "Finalizar Compra";
+
+		buttonGroup.appendChild(vaciarBtn);
+		buttonGroup.appendChild(finalizarBtn);
 
 		const totalElement = document.createElement("h5");
 		totalElement.classList.add("mb-0");
@@ -116,11 +123,21 @@ const carrito = {
 			2
 		)}</span>`;
 
-		footerContainer.appendChild(vaciarBtn);
+		footerContainer.appendChild(buttonGroup);
 		footerContainer.appendChild(totalElement);
+
 		modalBody.appendChild(footerContainer);
 
 		vaciarBtn.addEventListener("click", () => {
+			carrito.vaciar();
+			carrito.actualizarIcono();
+			carrito.llenarModalCarrito();
+		});
+
+		finalizarBtn.addEventListener("click", () => {
+			const totalGastado = total.toFixed(2);
+
+			alert(`¡Compra finalizada! Total gastado: $${totalGastado}`);
 			carrito.vaciar();
 			carrito.actualizarIcono();
 			carrito.llenarModalCarrito();
