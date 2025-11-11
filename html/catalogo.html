@@ -29,8 +29,8 @@
                         </li>
                     </ul>
                     <div class="d-flex ms-lg-3">
-                        <button class="btn btn-outline-dark me-2 rounded-pill" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
-                            Iniciar Sesión
+                        <button id="botonCerrarSesion" class="btn btn-outline-dark me-2 rounded-pill d-none" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            Cerrar Sesión
                         </button>
                         <button class="btn btn-dark rounded-circle position-relative" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             🛒
@@ -60,6 +60,45 @@
         </div>
     </header>
 
+    <!-- modal login -->
+    <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Inicie Sesion Para Continuar</h5>
+          </div>
+          
+          <form id="loginForm" novalidate>
+            <div class="modal-body">
+              
+              <div id="loginErrorContenedor"></div>
+
+              <div class="mb-3">
+                <label for="loginUsuario" class="form-label">Email</label>
+                <input type="email" class="form-control" id="loginUsuario" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="loginContrasena" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="loginContrasena" required>
+              </div>
+              
+              <p class="text-muted">
+                Solo para prueba: <br>
+                Usuario: <strong>admin123</strong> <br>
+                Contraseña: <strong>12345</strong>
+              </p>
+
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-dark" id="botonLogin">Ingresar</button>
+            </div>
+          </form>
+          
+        </div>
+      </div>
+    </div>
+
     <main class="container-lg flex-grow-1">
 
         <h1 class="text-center mb-5 fw-light">🛒 Nuestro Catálogo Completo</h1>
@@ -84,6 +123,7 @@
     <script src="../js/api.js"></script>
     <script src="../js/render.js"></script>
     <script src="../js/carrito.js"></script>
+    <script src="../js/login.js"></script>
 
 </body>
 </html>
