@@ -21,7 +21,7 @@ const api = {
     try {
       const respuesta = await fetch(URL_PROD);
       if (!respuesta.ok) {
-        console.log(
+        throw new Error(
           `Error buscando al producto con el id ${id}: ${respuesta.status}`
         );
       }
@@ -29,9 +29,6 @@ const api = {
       const producto = await respuesta.json();
       return producto;
     } catch (error) {
-      console.log(
-        `Error buscando al producto con el id ${id}: ${error.message}`
-      );
       throw error;
     }
   },
