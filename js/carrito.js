@@ -39,7 +39,10 @@ const carrito = {
 		const iconoCarrito = document.getElementById("icono-carrito-contador");
 
 		const productosCarrito = carrito.obtener();
-		const cantidadProductos = productosCarrito.length;
+		const cantidadProductos = productosCarrito.reduce(
+			(total, producto) => total + producto.cantidad,
+			0
+		);
 
 		if (cantidadProductos > 0) {
 			iconoCarrito.innerText = cantidadProductos;
