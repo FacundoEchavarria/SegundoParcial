@@ -8,7 +8,7 @@ const carrito = {
 
   guardar: (items) => {
     localStorage.setItem(carrito.CLAVE_STORAGE, JSON.stringify(items));
-    // carrito.actualizarIcono();
+    carrito.actualizarIcono();
   },
 
   agregar: (producto) => {
@@ -35,7 +35,19 @@ const carrito = {
 
   eliminar: (productoId) => {},
 
-  actualizarIcono: () => {},
+  actualizarIcono: () => {
+    const iconoCarrito = document.getElementById('icono-carrito-contador');
+
+    const productosCarrito = carrito.obtener();
+    const cantidadProductos = productosCarrito.length;
+
+    if (cantidadProductos > 0) {
+      iconoCarrito.innerText = cantidadProductos;
+      iconoCarrito.style.display = 'flex';
+    } else {
+      iconoCarrito.style.display = 'none';
+    }
+  },
 
   vaciar: () => {
     localStorage.removeItem(carrito.CLAVE_STORAGE);
@@ -44,4 +56,4 @@ const carrito = {
   },
 };
 
-carrito.actualizarIcono();
+document.addEventListener('DOMContentLoaded', carrito.actualizarIcono);
