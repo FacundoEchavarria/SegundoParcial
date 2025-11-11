@@ -23,7 +23,9 @@ const render = {
           <p class="fs-4 fw-bolder text-dark">$${p.price.toFixed(2)}</p>
           </div>
           <div class="card-footer bg-white border-0 pt-0 pb-3 d-grid">
-          <button class="btn btn-dark rounded-pill" data-product-id="${p.id}">
+          <button class="btn btn-dark rounded-pill btn-agregar" data-product-id="${
+            p.id
+          }">
             Agregar al carrito
             </button>
             </div>
