@@ -15,6 +15,51 @@ body {
     font-weight: 600;
 }
 
+.navbar-brand{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo-store{
+    background: #02B3BB;
+    background: radial-gradient(circle,rgba(2, 179, 187, 1) 0%, rgba(0, 80, 126, 1) 50%);
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+#heroCarousel .carousel-control-prev {
+    /* "Unos px mas hacia dentro" desde la izquierda */
+    left: -10px;
+}
+
+#heroCarousel .carousel-control-next {
+    /* "Unos px mas hacia dentro" desde la derecha */
+    right: -10px; 
+}
+#heroCarousel .carousel-control-next-icon {
+    /* "Unos px mas hacia dentro" desde la derecha */
+    height: 30px;
+}
+#heroCarousel .carousel-control-prev-icon {
+    /* "Unos px mas hacia dentro" desde la derecha */
+    height: 30px;
+}
+
+/* 2. Estilo para Escritorio (lg = 992px y más): FUERA del carrusel */
+@media (min-width: 992px) {
+    #heroCarousel .carousel-control-prev {
+        /* Mover fuera del borde izquierdo */
+        left: -30px;
+    }
+
+    #heroCarousel .carousel-control-next {
+        /* Mover fuera del borde derecho */
+        right: -30px;
+    }
+}
 /* Asegura que los botones sean consistentes */
 .btn-dark {
     border: none;
