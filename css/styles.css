@@ -57,6 +57,13 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important; 
 }
+
+
+
+.btn-agregar:hover {
+    background: #02B3BB;
+    background: radial-gradient(circle, rgba(2, 179, 187, 1) 0%, rgba(0, 80, 126, 1) 50%);
+}
 .btn-dark {
     border: none;
     transition: background-color 0.3s ease;
