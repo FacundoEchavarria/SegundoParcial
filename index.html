@@ -31,7 +31,7 @@
                         <button class="btn btn-outline-dark me-2 rounded-pill" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
                             Iniciar Sesión
                         </button>
-                        <button class="btn btn-dark rounded-circle position-relative" type="button">
+                        <button class="btn btn-dark rounded-circle position-relative" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                             🛒
                             <span id="icono-carrito-contador" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 0
@@ -41,6 +41,22 @@
                 </div>
             </div>
         </nav>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Carrito</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="cuerpo-modal-carrito">
+                        ...
+                    </div>
+                
+                </div>
+            </div>
+        </div>
     </header>
 
     <main class="container-lg">
