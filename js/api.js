@@ -1,4 +1,6 @@
+// FUNCIONES DE CONECCION CON API
 const api = {
+  // GET DE TODOS LOS PRODUCTOS
   obtenerProductos: async () => {
     const URL_PROD = 'https://fakestoreapi.com/products';
 
@@ -15,6 +17,7 @@ const api = {
     }
   },
 
+  // GET DE PRODUCTO INDIVIDUAL POR ID
   obtenerProductoId: async (id) => {
     const URL_PROD = `https://fakestoreapi.com/products/${id}`;
 

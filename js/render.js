@@ -1,3 +1,4 @@
+// FUNCIONES DE RENDERIZADO
 const toastElemento = document.getElementById('miToast');
 const toastBody = toastElemento.querySelector('.toast-body');
 
