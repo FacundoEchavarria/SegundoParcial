@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       botonAgregar.addEventListener('click', () => {
         carrito.agregar(productoEncontrado);
+        render.mostrarToast('Producto agregado al carrito', 'succes');
       });
     } catch (error) {
       console.log(`Error al buscar producto: ${error.message}`);

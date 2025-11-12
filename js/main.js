@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             (p) => p.id === productoId
           );
           carrito.agregar(productoEncontrado);
+          render.mostrarToast('Producto agregado al carrito', 'succes');
         } else {
           console.error('Error: Producto no encontrado.');
         }

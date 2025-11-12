@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
           modal.hide();
         }
 
-        alert('Sesión iniciada');
+        render.mostrarToast('Sesion iniciada exitosamente.', 'succes');
         window.location.reload();
       } else {
         const loginErrorContenedor = document.getElementById(
