@@ -1,16 +1,20 @@
+// LOGICA DEL CARRITO
 const carrito = {
   CLAVE_STORAGE: 'carrito',
 
+  // OBTENER LA LISTA DEL CARRITO
   obtener: () => {
     const carritoJSON = localStorage.getItem(carrito.CLAVE_STORAGE);
     return carritoJSON ? JSON.parse(carritoJSON) : [];
   },
 
+  // GUARDAR NUEVA LISTA DE CARRITO
   guardar: (items) => {
     localStorage.setItem(carrito.CLAVE_STORAGE, JSON.stringify(items));
     carrito.actualizarIcono();
   },
 
+  // AGREGAR PRODUCTO AL CARRITO
   agregar: (producto) => {
     const items = carrito.obtener();
     const itemExistente = items.find((item) => item.id === producto.id);
@@ -33,6 +37,7 @@ const carrito = {
     console.log('Producto agregado al carrito:', items);
   },
 
+  // ELIMINAR PRODUCTO DEL CARRITO
   eliminar: (productoId) => {
     const idNumerico = parseInt(productoId);
     const items = carrito.obtener();
@@ -49,6 +54,7 @@ const carrito = {
     console.log(`Producto ${idNumerico} eliminado.`);
   },
 
+  // ACTUALIZAR ICONO DEL CARRITO
   actualizarIcono: () => {
     const iconoCarrito = document.getElementById('icono-carrito-contador');
 
@@ -66,12 +72,14 @@ const carrito = {
     }
   },
 
+  // VACIAR CARRITO
   vaciar: () => {
     localStorage.removeItem(carrito.CLAVE_STORAGE);
     carrito.actualizarIcono();
     console.log('Carrito vaciado exitosamente.');
   },
 
+  // INCREMENTAR Y DECREMENTAR CANTIDAD DE PRODUCTOS DEL CARRITO
   incrementarCantidad: (id) => {
     const items = carrito.obtener();
     const itemExistente = items.find((item) => item.id === id);
@@ -103,6 +111,7 @@ const carrito = {
     carrito.guardar(items);
   },
 
+  // RENDERIZAR MODAL DEL CARRITO Y INICIALIZACION DE LISTENER DEL MODAL
   llenarModalCarrito: () => {
     const productos = carrito.obtener();
     const modalBody = document.getElementById('cuerpo-modal-carrito');
@@ -227,6 +236,7 @@ const carrito = {
   },
 };
 
+// ACTUALIZAR CARRITO AL CARGAR LA PAGINA
 document.addEventListener('DOMContentLoaded', carrito.actualizarIcono);
 
 const modalElemento = document.getElementById('staticBackdrop');

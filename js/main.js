@@ -1,9 +1,9 @@
+// FUNCION AL CARGAR ELEMENTOS DE PAGINA INICIO
 document.addEventListener('DOMContentLoaded', () => {
-  // Usaremos una API pública que devuelve 20 productos.
   const productsContainer = document.getElementById('productos-container');
   let todosLosProductos = [];
 
-  // Función para obtener productos de la API
+  // FUNCION DE PETICION A LA API Y RENDERIZAR PRODUCTOS
   const iniciarIndex = async () => {
     try {
       productsContainer.innerHTML =
@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // FUNCIOND DE INICILIZACION DE LISTENERS
   const agregarListenersBoton = () => {
     const botonesAgregar = document.querySelectorAll('.btn-agregar');
     botonesAgregar.forEach((boton) => {

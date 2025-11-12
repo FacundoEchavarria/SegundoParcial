@@ -1,7 +1,10 @@
+// FUNCION AL CARGAR ELEMENTOS DE LA PAGINA
 document.addEventListener('DOMContentLoaded', () => {
+  // DATOS DE USUARIO
   const NOMBRE_USUARIO = 'admin123';
   const CONTRASENA = '12345';
 
+  // VERIFICACION SI ESTA LOGEADO O NO Y RENDERIZACION
   const loginForm = document.getElementById('loginForm');
   const loginModal = document.getElementById('loginModal');
 
@@ -20,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     botonCerrarSesion.classList.remove('d-none');
   }
 
+  // VARIFICACION DE USUARIO Y CONTRASEÑA
   if (loginForm) {
     const loginUsuario = document.getElementById('loginUsuario');
     const loginContrasena = document.getElementById('loginContrasena');
@@ -50,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // INICIALIZACION LISTENER DE CERRAR SESION
   botonCerrarSesion.addEventListener('click', () => {
     localStorage.removeItem('usuarioLogin');
 

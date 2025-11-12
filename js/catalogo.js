@@ -1,8 +1,9 @@
+// FUNCION AL CARGAR ELEMENTOS DE PAGINA CATALOGO
 document.addEventListener('DOMContentLoaded', async () => {
   const contenedorProductos = document.getElementById('contenedor-productos');
   let todosLosProductos = [];
 
-  // 2. FUNCIÓN DE CARGA Y RENDERIZADO (sin cambios significativos)
+  // FUNCION DE CARGA Y RENDERIZADO
   const inicialCatalogo = async () => {
     try {
       console.log('Obteniendo productos...');
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   };
 
-  // 3. FUNCIÓN DE INICIALIZACIÓN DE LISTENERS
+  // FUNCION DE INICIALIZACIÓN DE LISTENERS
 
   const agregarListenersBoton = () => {
     const botonesAgregar = document.querySelectorAll('.btn-agregar');
