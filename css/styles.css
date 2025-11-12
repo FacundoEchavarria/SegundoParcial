@@ -12,6 +12,20 @@ body {
     font-weight: 600 !important;
 }
 
+.cargador-spinner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-grow {
+    height: 5rem;
+    width: 5rem;
+    background-color: #02B3BB;
+}
 .navbar-brand{
     display: flex;
     flex-direction: row;
